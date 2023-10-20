@@ -1,0 +1,22 @@
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int x = n;
+        int rev = 0;
+        while(n!=0)
+        {
+            int rem = n%10;
+            rev = rev*10+rem;
+            n = n/10;
+        }
+        if(x==rev)
+        {
+            System.out.print(x+" is a Palindrom Number");
+        }
+        else{
+            System.out.print(x+" is not a Palindrom Number");
+        }
+    }
+}
