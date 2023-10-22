@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int a[13] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    char s[13][3] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+    int x;
+    scanf("%d", &x);
+    int i=0;
+    while(x>0)
+    {
+       if(x>=a[i])
+       {
+           printf("%s",s[i]);
+           x=x-a[i];
+       }
+       else{
+           i++;
+       }
+    }
+}
