@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+const char* oneDigitWords[] = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+const char* twoDigitWords[] = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+const char* teensWords[] = {"Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+void convertToWords(int num)
+{
+    if(num>=100)
+    {
+        printf("%s Hundred ",oneDigitWords[num/100]);
+        num=num%100;
+    }
+    if(num>=11&&num<=19)
+    {
+        printf("%s \n",teensWords[num-11]);
+    }
+    else
+    {
+        printf("%s ",twoDigitWords[num/10]);
+        printf("%s only\n",oneDigitWords[num%10]);
+    }
+}
+
+int main()
+{
+    int num;
+    printf("Enter a number between 1 and 999: ");
+    scanf("%d", &num);
+    convertToWords(num);
+    return 0;
+}
+
