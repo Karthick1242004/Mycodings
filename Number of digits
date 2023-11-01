@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+    int nod,num;
+    scanf("%d",&num);
+    for(nod=0;num>0;nod++,num/=10);
+    printf("%d",nod);
+}
