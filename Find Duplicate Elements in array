@@ -1,29 +1,12 @@
-#include<stdio.h>
-int main()
-{
-    int n,x=0;
-    scanf("%d",&n);
-    int a[n];
-    for(int i=0;i<n;i++)
-    {
-        scanf("%d",&a[i]);
-    }
-    for(int i=0;i<n;i++)
-    {
-        for(int j=i;j<n;j++)
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length-1;i++)
         {
-            if(a[i]==a[j])
+            if(nums[i]==nums[i+1])
             {
-                x++;
-                break;
+                return true;
             }
         }
+        return false;
     }
-    if(x>=1)
-    {
-        printf("True");
-    }
-    else{
-        printf("False");
-    }
-}
