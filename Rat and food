@@ -1,0 +1,30 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int u = sc.nextInt();
+        int m = sc.nextInt();
+        int a[] = new int[n];
+        int res = 0;
+        int sum = 0;
+        res = n*u;
+        int count = 0;
+        for(int i=0;i<m;i++)
+        {
+            a[i] = sc.nextInt();
+            sum +=a[i];
+            count++;
+            if(sum>=res)
+            {
+                break;
+            }
+            
+        }
+        System.out.print(count);
+        
+        
+    }
+}
