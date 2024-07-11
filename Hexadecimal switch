@@ -1,0 +1,33 @@
+import java.util.*;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        if(s==null)
+        {
+            System.out.print("-1");
+        }
+        int res = s.charAt(0) - '0';
+        for(int i=1;i<s.length();)
+        {
+            char c = s.charAt(i);
+            i++;
+            if(c == 'A')
+            {
+                res = res & (s.charAt(i) - '0');
+            }
+            else if(c == 'B')
+            {
+                res = res| (s.charAt(i) - '0');
+            }
+            else if(c == 'C')
+            {
+                res = res^(s.charAt(i) - '0');
+            }
+            i++;
+        }
+            System.out.print(res);
+    }
+}
