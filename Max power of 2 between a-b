@@ -1,0 +1,23 @@
+import java.util.*;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int max = 0;
+        for(int i=a;i<=b;i++)
+        {
+            if((i & (i-1)) == 0)
+            {
+                int power = (int)(Math.log(i)/Math.log(2));
+                if(power>max)
+                {
+                    max = power;
+                }
+            }
+        }
+        System.out.print(max);
+    }
+}
