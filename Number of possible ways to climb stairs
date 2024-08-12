@@ -1,0 +1,22 @@
+import java.util.*;
+class Main
+{
+    static int find_count(int n)
+    {
+        if(n==1)
+        {
+            return 1;
+        }
+        if(n==2)
+        {
+            return 2;
+        }
+        return find_count(n-1)+find_count(n-2);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.print(find_count(n));
+    }
+}
